@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MVC5.Models.Album>
+
+
+    @{
+        ViewBag.Title = "Result";
+    }
+
+    <h2>Result</h2>
+    <table>
+        <tr>
+            <th>Artists</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>@item.Artist</td>
+            <td>@item.Title</td>
+            <td>@item.Price</td>
+            <td>@string.Format("{0:C}", item.Price)</td>
+
+            </tr>
+        }
+
+    </table>
+
